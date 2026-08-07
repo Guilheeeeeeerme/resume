@@ -1,88 +1,83 @@
-import { resume } from './data'
+import { useCallback, useMemo, useState } from 'react'
+import { resume } from './data/resume'
+import { Education } from './components/Education'
+import { ExpandControls } from './components/ExpandControls'
+import { Experience } from './components/Experience'
+import { Header } from './components/Header'
+import { Languages } from './components/Languages'
+import { PrintButton } from './components/PrintButton'
+import { Skills } from './components/Skills'
+import { Summary } from './components/Summary'
+import { ThemeToggle } from './components/ThemeToggle'
+import { useTheme } from './hooks/useTheme'
 
 function App() {
+  const { mode, cycleMode } = useTheme()
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(() => new Set())
+
+  const allIds = useMemo(
+    () => resume.experience.map((job) => job.id),
+    [],
+  )
+
+  const allExpanded =
+    allIds.length > 0 && allIds.every((id) => expandedIds.has(id))
+
+  const toggle = useCallback((id: string) => {
+    setExpandedIds((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }, [])
+
+  const expandAll = useCallback(() => {
+    setExpandedIds(new Set(allIds))
+  }, [allIds])
+
+  const collapseAll = useCallback(() => {
+    setExpandedIds(new Set())
+  }, [])
+
   return (
-    <main className="resume">
-      <header>
-        <div className="identity">
-          <h1>{resume.name}</h1>
-          <div className="headline">{resume.headline}</div>
-        </div>
-        <div className="contact">
-          {resume.contact.map((item) =>
-            'href' in item ? (
-              <a key={item.label} href={item.href}>
-                {item.label}
-              </a>
-            ) : (
-              <span key={item.label}>{item.label}</span>
-            ),
-          )}
-        </div>
-      </header>
+    <>
+      <a className="skip-link screen-only" href="#resume-content">
+        Skip to résumé
+      </a>
 
-      <section>
-        <h2 className="section-title">Summary</h2>
-        <p className="summary">{resume.summary}</p>
-      </section>
-
-      <section>
-        <h2 className="section-title">Technical Skills</h2>
-        <div className="skills">
-          {resume.skills.map((skill) => (
-            <div className="skill" key={skill.label}>
-              <span className="skill-label">{skill.label}</span>
-              <span className="skill-value">{skill.value}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2 className="section-title">Experience</h2>
-        <div className="jobs">
-          {resume.experience.map((job) => (
-            <article className="job" key={job.title}>
-              <div className="job-header">
-                <div className="job-title">{job.title}</div>
-                <div className="job-date">{job.dates}</div>
-              </div>
-              <ul>
-                {job.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-              <div className="stack">{job.stack}</div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <div className="footer-row">
-        <section>
-          <h2 className="section-title">Education</h2>
-          <div className="edu-list">
-            {resume.education.map((edu) => (
-              <div className="edu" key={edu.degree}>
-                <strong>{edu.degree}</strong>
-                <span>{edu.school}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="section-title">Languages</h2>
-          <div className="lang-line">
-            {resume.languages.map((lang) => (
-              <div key={lang.name}>
-                <strong>{lang.name}</strong> — {lang.level}
-              </div>
-            ))}
-          </div>
-        </section>
+      <div className="toolbar screen-only" role="toolbar" aria-label="Résumé controls">
+        <ThemeToggle mode={mode} onCycle={cycleMode} />
+        <ExpandControls
+          allExpanded={allExpanded}
+          onExpandAll={expandAll}
+          onCollapseAll={collapseAll}
+        />
+        <PrintButton />
+        <p className="toolbar-hint">
+          Print / Save as PDF uses a one-page layout (A4 or US Letter).
+        </p>
       </div>
-    </main>
+
+      <main id="resume-content" className="resume" tabIndex={-1}>
+        <Header
+          name={resume.name}
+          headline={resume.headline}
+          contact={resume.contact}
+        />
+        <Summary summary={resume.summary} />
+        <Skills skills={resume.skills} />
+        <Experience
+          experience={resume.experience}
+          expandedIds={expandedIds}
+          onToggle={toggle}
+        />
+        <div className="footer-row">
+          <Education education={resume.education} />
+          <Languages languages={resume.languages} />
+        </div>
+      </main>
+    </>
   )
 }
 

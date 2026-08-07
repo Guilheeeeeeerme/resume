@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "print:a4": "node scripts/print-validate.mjs --format=a4",
+    "print:letter": "node scripts/print-validate.mjs --format=letter",
+    "print:test": "node scripts/print-validate.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",
@@ -19,6 +22,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "oxlint": "^1.75.0",
+    "playwright": "^1.55.0",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"
   }
