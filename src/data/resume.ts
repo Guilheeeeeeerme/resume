@@ -48,7 +48,7 @@ export const resume: Resume = {
     },
   ],
   summary:
-    'Full Stack Software Engineer with 10+ years building distributed systems, enterprise applications, and manufacturing software. Strong in the JavaScript and TypeScript ecosystems, with focus on Domain-Driven Design, event-driven architectures, and enterprise integrations. Experience designing and evolving software for manufacturing, financial services, and real-time systems. Fluent in English; collaborates with distributed international teams.',
+    'Full Stack Software Engineer with 10+ years of experience building distributed systems, enterprise applications, and manufacturing software. Strong expertise in the JavaScript and TypeScript ecosystems, with a focus on Domain-Driven Design, event-driven architectures, and enterprise integrations. Experienced in designing and evolving software for manufacturing, financial services, and real-time systems. Fluent in English and experienced collaborating with distributed international teams.',
   skills: [
     { label: 'Languages', value: 'JavaScript, TypeScript, C#, SQL' },
     {
@@ -57,7 +57,8 @@ export const resume: Resume = {
     },
     {
       label: 'Backend',
-      value: 'Node.js, NestJS, Express, .NET Core, REST APIs, GraphQL',
+      value:
+        'Node.js, NestJS, Express, .NET Core, REST APIs, GraphQL, Hasura, Keycloak',
     },
     {
       label: 'Databases & Messaging',
@@ -70,9 +71,11 @@ export const resume: Resume = {
     {
       label: 'Architecture',
       value:
-        'Domain-Driven Design, Event-Driven Architecture, Distributed Systems, MES',
+        'Domain-Driven Design (DDD), Event-Driven Architecture, Distributed Systems, Manufacturing Execution Systems (MES)',
     },
   ],
+  skillsKeywords:
+    'JavaScript, TypeScript, C#, SQL, React, Angular, Redux, NgRx, Ionic, Microfrontends, Node.js, NestJS, Express, .NET Core, REST APIs, GraphQL, Hasura, Keycloak, MySQL, PostgreSQL, Redis, RabbitMQ, NATS, AWS, Azure, Docker, GitHub Actions, Bitbucket Pipelines, Domain-Driven Design, DDD, Event-Driven Architecture, Distributed Systems, Manufacturing Execution Systems, MES, Full Stack Software Engineer',
   experience: [
     {
       id: 'machinemetrics',
@@ -80,14 +83,15 @@ export const resume: Resume = {
       title: 'Full Stack Software Engineer',
       dates: 'Apr 2024 – Present',
       printHighlights: [
-        'Develop manufacturing software for CNC operators and production teams across shop-floor workflows; design and implement MES capabilities for ERP-driven, labor-based, and legacy production models.',
-        'Led Waiting For Work (WFW) idle-state tracking and palletized-machine support via event-driven orchestration.',
-        'Delivered First Article Inspection, labor reporting, part counting, scheduling improvements, and ETTC calculations.',
-        'Own technical design for assigned features: domain modeling, API design, database migrations, production support, and incident investigation.',
+        'Develop enterprise manufacturing software used by CNC operators and production teams across shop-floor workflows.',
+        'Designed and implemented MES capabilities supporting multiple operational models, including ERP-driven, labor-based, and legacy production workflows.',
+        'Led the implementation of the Waiting For Work (WFW) workflow and support for palletized machines using event-driven orchestration.',
+        'Delivered features including First Article Inspection, labor reporting, part counting, scheduling improvements, and ETTC calculations.',
+        'Own technical design, domain modeling, API design, database migrations, production support, and incident investigation for assigned features.',
       ],
       extendedHighlights: [
-        'Work spans scheduling, execution, and shop-floor operations used by CNC operators and production teams.',
-        'Technologies on this role include React, Node.js, TypeScript, GraphQL, Hasura, MySQL, Redis, and NATS.',
+        'Work spans scheduling, execution, and shop-floor operations.',
+        'Stack on this role: React, Node.js, TypeScript, GraphQL, Hasura, MySQL, Redis, NATS.',
       ],
       technologies: [
         'React',
@@ -106,13 +110,13 @@ export const resume: Resume = {
       title: 'Software Engineer',
       dates: 'Nov 2022 – Apr 2024',
       printHighlights: [
-        'Built enterprise Angular apps in a microfrontend architecture; implemented Keycloak authentication and cross-application navigation.',
-        'Delivered inventory, logistics, and operational-management features with product stakeholders; contributed to modernization, upgrades, and stability.',
+        'Developed and maintained enterprise Angular applications within a microfrontend architecture.',
+        'Implemented authentication and cross-application navigation using Keycloak.',
+        'Partnered with product stakeholders to deliver inventory, logistics, and operational management features.',
+        'Contributed to platform modernization, dependency upgrades, bug fixes, and overall application stability.',
       ],
       extendedHighlights: [
-        'Developed and maintained applications within a shared microfrontend ecosystem.',
-        'Work included dependency upgrades, bug fixes, and broader platform stability efforts.',
-        'Technologies: Angular, TypeScript, Node.js, NestJS, Keycloak, AWS.',
+        'Stack on this role: Angular, TypeScript, Node.js, NestJS, Keycloak, AWS.',
       ],
       technologies: [
         'Angular',
@@ -129,13 +133,14 @@ export const resume: Resume = {
       title: 'Front-End Software Engineer',
       dates: 'Jun 2021 – Nov 2022',
       printHighlights: [
-        'Built Angular apps for industrial and shop-floor operations; collaborated on API contracts and data modeling with backend teams.',
-        'Promoted Docker adoption across development teams; maintained Azure-hosted applications and integrations.',
+        'Built Angular applications for industrial operations and shop-floor software.',
+        'Collaborated on API contract design and data modeling with backend teams.',
+        'Promoted Docker adoption across development teams through technical guidance.',
+        'Maintained cloud-hosted applications and Azure integrations.',
       ],
       extendedHighlights: [
-        'Technical guidance supported Docker standardization across teams.',
-        'Maintained cloud-hosted applications, Azure integrations, and related pipelines.',
-        'Technologies: Angular, TypeScript, Azure, Docker, GitHub Actions.',
+        'Also maintained related pipelines for Azure-hosted applications.',
+        'Stack on this role: Angular, TypeScript, Azure, Docker, GitHub Actions.',
       ],
       technologies: [
         'Angular',
@@ -151,12 +156,14 @@ export const resume: Resume = {
       title: 'Full Stack Software Engineer / Technical Lead',
       dates: 'Jan 2019 – Jun 2021',
       printHighlights: [
-        'Technical Lead on a banking platform with a microservices architecture; led integrations with banking systems, payment platforms, and third-party services.',
-        'Worked on security requirements, certification processes, and financial industry standards; mentored juniors and collaborated with customers and stakeholders.',
+        'Served as Technical Lead for a banking platform built on a microservices architecture.',
+        'Led integrations with banking systems, payment platforms, and third-party services.',
+        'Worked on security requirements, certification processes, and financial industry standards.',
+        'Mentored junior developers and collaborated directly with customers and business stakeholders.',
       ],
       extendedHighlights: [
-        'Platform work involved payment and transport-related third-party integrations.',
-        'Technologies: C#, .NET Core, RabbitMQ, PostgreSQL, Angular, AWS, Docker.',
+        'Third-party integrations included payment and transport-related services.',
+        'Stack on this role: C#, .NET Core, RabbitMQ, PostgreSQL, Angular, AWS, Docker.',
       ],
       technologies: [
         'C#',
@@ -174,12 +181,12 @@ export const resume: Resume = {
       title: 'Full Stack Software Engineer',
       dates: 'Jan 2016 – Dec 2018',
       printHighlights: [
-        'Grew from intern to key contributor on industrial software for real-time offshore operations; built backend services, APIs, and web apps on distributed systems processing operational data.',
-        'Continued supporting the platform as an independent consultant after leaving.',
+        'Progressed from intern to a key contributor on industrial software projects.',
+        'Developed backend services, APIs, and web applications supporting real-time offshore operations.',
+        'Contributed to distributed systems processing operational data and continued supporting the platform as an independent consultant.',
       ],
       extendedHighlights: [
-        'Work included distributed systems that processed operational data streams.',
-        'Technologies: Node.js, Angular, React, Docker, Redis, PostgreSQL.',
+        'Stack on this role: Node.js, Angular, React, Docker, Redis, PostgreSQL.',
       ],
       technologies: [
         'Node.js',

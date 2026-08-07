@@ -25,18 +25,16 @@ Internal notes only. Not published with the site. Do not invent answers — conf
 | Hasura / Keycloak in skills | Role tech stacks only | Prior skills list included Hasura & Keycloak under Backend; latest skills section omitted them. Kept only on role technology lines. |
 | Ionic, Redux, NgRx | Kept in Frontend skills | No role-level evidence in experience bullets — confirm still accurate to list. |
 | Bitbucket Pipelines | Kept in Cloud & DevOps | Which role used Bitbucket Pipelines? |
+| Per-tech years / expertise levels | **Removed from résumé** | User asked to undo years. Do not re-add until they provide confirmed numbers. |
 
 ## Print vs website-only
 
-Moved or condensed into `extendedHighlights` (website expand) where print needed density:
+Print now uses the full bullet set from the source paste (unmerged). Website `extendedHighlights` keep role stack notes and minor extra context only:
 
-- MachineMetrics: shop-floor scheduling/execution context; full tech list as extended note.
-- Creed: microfrontend ecosystem wording; upgrade/bug-fix detail; tech list.
-- Mariner: Docker guidance phrasing; Azure/pipeline maintenance detail; tech list.
-- B2ML: payment/transport integration nuance from older copy; tech list.
-- RZX: “operational data streams” phrasing; tech list.
+- MachineMetrics: scheduling/execution note; stack note.
+- Creed / Mariner / B2ML / RZX: stack notes; Mariner pipeline note; B2ML payment/transport nuance.
 
-Print keeps the strongest concise bullets from the provided source; website expands without adding new claims.
+Print spacing tightened slightly so the fuller content still fits one page.
 
 ## Conflicts resolved
 

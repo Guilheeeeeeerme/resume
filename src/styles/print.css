@@ -52,29 +52,29 @@
     min-height: 0;
     max-height: none;
     margin: 0 auto;
-    padding: 9mm 10mm 8mm;
+    padding: 8mm 9mm 7mm;
     border: none;
     box-shadow: none;
-    gap: 2.6mm;
-    font-size: 9.2pt;
-    line-height: 1.28;
+    gap: 2.1mm;
+    font-size: 9pt;
+    line-height: 1.26;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     overflow: visible;
   }
 
   .resume-header {
-    gap: 1.4mm;
-    padding-bottom: 2mm;
+    gap: 1.2mm;
+    padding-bottom: 1.6mm;
   }
 
   h1 {
-    font-size: 16pt;
+    font-size: 15.5pt;
     line-height: 1.1;
   }
 
   .headline {
-    font-size: 9.5pt;
+    font-size: 9.2pt;
   }
 
   .identity {
@@ -82,9 +82,9 @@
   }
 
   .contact {
-    gap: 0.6mm 3mm;
-    font-size: 7.4pt;
-    line-height: 1.25;
+    gap: 0.5mm 2.8mm;
+    font-size: 7.2pt;
+    line-height: 1.22;
   }
 
   .contact a {
@@ -93,91 +93,106 @@
   }
 
   .resume-section {
-    gap: 1.2mm;
+    gap: 1mm;
   }
 
   .section-title {
-    font-size: 8pt;
+    font-size: 7.8pt;
     letter-spacing: 0.06em;
-    padding-left: 1.6mm;
+    padding-left: 1.5mm;
     border-left-width: 1.5pt;
   }
 
   .summary {
-    font-size: 8.8pt;
-    line-height: 1.3;
+    font-size: 8.5pt;
+    line-height: 1.28;
     max-width: none;
   }
 
   .skills {
     grid-template-columns: 1fr 1fr;
-    gap: 0.8mm 3mm;
+    gap: 0.6mm 2.5mm;
   }
 
   .skill {
     grid-template-columns: 26mm 1fr;
-    gap: 1.5mm;
+    gap: 1.4mm;
   }
 
   .skill-label {
-    font-size: 7.8pt;
+    font-size: 7.5pt;
   }
 
   .skill-value {
-    font-size: 8pt;
-    line-height: 1.25;
+    font-size: 7.7pt;
+    line-height: 1.22;
+  }
+
+  /* Keep keyword blob in the PDF text layer for ATS parsers */
+  .skills-keywords {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 0 0.8mm;
+    padding: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    font-size: 6.6pt;
+    line-height: 1.2;
+    color: #333;
   }
 
   .jobs {
-    gap: 2.2mm;
+    gap: 1.8mm;
   }
 
   .job {
-    gap: 0.7mm;
+    gap: 0.55mm;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   .job-title {
-    font-size: 9pt;
+    font-size: 8.7pt;
   }
 
   .job-date {
-    font-size: 7.5pt;
+    font-size: 7.3pt;
   }
 
   .job-highlights {
-    padding-left: 3.5mm;
-    gap: 0.55mm;
+    padding-left: 3.2mm;
+    gap: 0.4mm;
   }
 
   .job-highlights li {
-    font-size: 8.3pt;
-    line-height: 1.26;
+    font-size: 8pt;
+    line-height: 1.24;
   }
 
   .stack {
-    font-size: 7.2pt;
-    line-height: 1.2;
+    font-size: 7pt;
+    line-height: 1.18;
   }
 
   .footer-row {
-    gap: 3mm;
-    margin-top: 0.5mm;
+    gap: 2.5mm;
+    margin-top: 0.3mm;
   }
 
   .edu strong {
-    font-size: 8.2pt;
+    font-size: 8pt;
   }
 
   .edu span,
   .lang-list {
-    font-size: 7.8pt;
+    font-size: 7.5pt;
   }
 
   .edu-list,
   .lang-list {
-    gap: 0.8mm;
+    gap: 0.6mm;
   }
 
   a[href]::after {

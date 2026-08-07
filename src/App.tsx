@@ -9,6 +9,7 @@ import { PrintButton } from './components/PrintButton'
 import { Skills } from './components/Skills'
 import { Summary } from './components/Summary'
 import { ThemeToggle } from './components/ThemeToggle'
+import { JsonLd } from './components/JsonLd'
 import { useTheme } from './hooks/useTheme'
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <>
+      <JsonLd resume={resume} />
       <a className="skip-link screen-only" href="#resume-content">
         Skip to résumé
       </a>
@@ -66,7 +68,10 @@ function App() {
           contact={resume.contact}
         />
         <Summary summary={resume.summary} />
-        <Skills skills={resume.skills} />
+        <Skills
+          skills={resume.skills}
+          skillsKeywords={resume.skillsKeywords}
+        />
         <Experience
           experience={resume.experience}
           expandedIds={expandedIds}

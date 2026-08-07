@@ -14,9 +14,7 @@ export type ExperienceEntry = {
   company: string
   title: string
   dates: string
-  /** Concise bullets for the one-page print résumé and default website view. */
   printHighlights: string[]
-  /** Additional truthful detail shown only when expanded on the website. */
   extendedHighlights: string[]
   technologies: string[]
 }
@@ -47,6 +45,8 @@ export type Resume = {
   contact: ContactItem[]
   summary: string
   skills: SkillGroup[]
+  /** Plain keyword string for ATS / auto-readers. */
+  skillsKeywords: string
   experience: ExperienceEntry[]
   education: EducationEntry[]
   languages: LanguageEntry[]
