@@ -47,10 +47,17 @@
 
 ---
 
-### 🔄 [Workana](https://www.workana.com)
-- **Status:** In Progress — agent running, result pending
-- **To do:**
-  - [ ] Confirm account creation and profile update result
+### ⚠️ [Workana](https://www.workana.com/freelancer/e4319be15eb99e9c2630b4653f08eece)
+- **Status:** Partial — headline, rate, and bio set; manual steps remain
+- **Done:**
+  - [x] Headline: "Full Stack Developer"
+  - [x] Hourly rate: BRL 150/hora
+  - [x] About/bio: updated in English
+- **Manual steps:**
+  - [ ] Habilidades: Delete Java → add React (5-10yr), TypeScript (3-5yr), Node.js (3-5yr)
+  - [ ] Idiomas: Add Português (nativo)
+  - [ ] Experiência profissional: Update old Java/Cordova text to reflect current stack
+  - [ ] Carregar CV: Upload `versions/guilherme-ferreira-resume-2026-08-19.pdf`
 
 ---
 
