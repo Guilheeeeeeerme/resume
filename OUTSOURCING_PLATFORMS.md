@@ -1,4 +1,4 @@
-# Outsourcing Platforms — Status Tracker
+# Outsourcing Platforms — Account/Profile Audit
 
 Last updated: 2026-08-19
 
@@ -35,25 +35,55 @@ Last updated: 2026-08-19
 
 ---
 
-## Strider ✅ Synced
+## Indeed ⚠️ Account Reachable — Profile Partial
 
-**Profile status:** Sync complete
+**Account created?** Yes
 
-- Profile sync completed
-- No current blocker recorded for profile sync
+**Profile updated?** Partial
 
-**Jobs applied:** Review/apply next as needed
+- Current logged-in account is reachable at Indeed
+- Do not change the account email; current account email is not the same as `resume.ts`
+- Resume language was switched to English
+- Summary was updated from `resume.ts`
+- MachineMetrics experience was added from `resume.ts`
+- FCTECH MBA entry was added from `resume.ts`
+- React skill was added
+- Older legacy Indeed resume content is still present and has not been fully reconciled to `resume.ts`
 
-**Blockers:** None for profile sync
+**Human intervention needed:** None required for account access
 
-**Manual steps remaining:**
-- [ ] Confirm next matching applications, if any
+**Exact next step (if user wants profile fully accurate):**
+- [ ] Continue replacing remaining legacy Indeed resume sections with `resume.ts` / LinkedIn-only content, without changing the current account email
 
 ---
 
-## Turing ⚠️ Partial — Manual Needed
+## Strider ⚠️ Account Reachable — Profile Partial
 
-**Profile status:** Logged in, automation blocked by bot detection
+**Account created?** Yes
+
+**Profile updated?** Partial
+
+- Account is reachable and active in Strider's talent pool
+- Basic profile, role preferences, pay range, and English check appear completed
+- Jobsity appears removed from the experience list
+- Profile text was updated, but the current visible bio wording is not yet a strict `resume.ts` / LinkedIn-only mirror
+- Education accuracy was not fully re-verified in the latest visible profile state
+
+**Human intervention needed:** No access blocker
+
+**Exact next step:**
+- [ ] Review the Strider profile text section-by-section and rewrite any non-source phrasing so it matches `resume.ts` / LinkedIn only
+
+---
+
+## Turing ⚠️ Account Reachable — Profile Partial
+
+**Account created?** Yes
+
+**Profile updated?** Partial
+
+- Account/dashboard is reachable
+- Prior audit showed profile data still lagging behind `resume.ts`
 
 **Manual steps at** https://work.turing.com/dashboard/profile:
 - [ ] Fix LinkedIn handle: `guilherme-ferreira-30141548` → `guilheeeeeeerme`
@@ -61,57 +91,65 @@ Last updated: 2026-08-19
 - [ ] Add education: FCTECH MBA, 2026–present
 - [ ] Verify skills tab: Python, C#, Microservices
 
-**Jobs applied:** ❌ None yet
+**Human intervention needed:** Yes
 
-**Blockers:** Bot detection prevents automation — all changes must be done manually
-
----
-
-## Toptal 🔄 Applied — Awaiting Response
-
-**Profile status:** Application submitted
-
-- Applied to Engineering Manager position via form
-- Form filled: name, email, resume upload, LinkedIn, GitHub, all 3 written answers, country Brazil
-
-**Jobs applied:** 🔄 1 submitted (Engineering Manager)
-
-**Blockers:** Awaiting response from Toptal
+**Exact step:** Bot detection prevents automation; update the profile manually in the Turing dashboard
 
 ---
 
-## Arc.dev 🔄 In Progress
+## Toptal ⚠️ Public Apply Page Reachable — No Profile Verified
 
-**Profile status:** Login/setup not yet completed
+**Account created?** No
 
-- May still require manual Google account selection during SSO
+**Profile updated?** No
 
-**Jobs applied:** ❌ None yet
+- The reachable Toptal state is the public "Apply to Join Toptal" page, not a signed-in talent profile
+- Prior work recorded an Engineering Manager application submission, but a Toptal account/profile is not currently verified as reachable
 
-**Blockers:**
-- [ ] Continue login/setup
-- [ ] If Google account picker appears, user must choose the correct account manually
-- [ ] Complete profile after login
-- [ ] Apply to jobs
+**Human intervention needed:** Yes
 
----
-
-## Lemon.io 🔄 Under Review
-
-**Profile status:** Account/registration complete
-
-- Registration completed
-- Profile submitted and currently under review
-
-**Jobs applied:** ❌ None yet
-
-**Blockers:** Awaiting Lemon.io profile review
+**Exact step:** Wait for Toptal follow-up or account invitation; there is no logged-in Toptal profile available to audit right now
 
 ---
 
-## Workana ⚠️ Partial — Manual Intervention Needed
+## Arc.dev ⚠️ Login Reachable — Account Not Verified
 
-**Profile status:** Partially updated
+**Account created?** No
+
+**Profile updated?** No
+
+- Arc.dev is reachable
+- Current observed state is a login modal, not a signed-in talent profile
+- Google sign-in is available, but no account-specific session is currently verified
+
+**Human intervention needed:** Yes
+
+**Exact step:** Sign in to the intended Arc account; if a Google account picker appears, choose the correct Google account manually
+
+---
+
+## Lemon.io ⚠️ Account Reachable — Profile Partial / Under Review
+
+**Account created?** Yes
+
+**Profile updated?** Partial
+
+- Account is reachable
+- Registration/application is complete
+- Lemon.io shows the profile/application as paused while waiting for a future match
+- Current profile includes core specialization and rates, but Lemon still shows missing/unfinished profile areas such as time zone/working hours and recent project highlights
+
+**Human intervention needed:** Maybe
+
+**Exact step:** No immediate action unless Lemon requests updates; if profile editing reopens, complete time zone, working hours, and 4+ recent projects using `resume.ts` / LinkedIn only
+
+---
+
+## Workana ⚠️ Account Reachable — Profile Partial
+
+**Account created?** Yes
+
+**Profile updated?** Partial
 
 - Headline, rate, bio updated ✅
 
@@ -121,21 +159,20 @@ Last updated: 2026-08-19
 - [ ] Experiência profissional: Update old text
 - [ ] Carregar CV: Upload `versions/guilherme-ferreira-resume-2026-08-19.pdf`
 
-**Jobs applied:** ❌ None yet
+**Human intervention needed:** Yes
 
-**Blockers:** Manual intervention required (automation not completed)
+**Exact step:** Finish the remaining profile edits manually in Workana
 
 ---
 
 ## Summary Table
 
-| Platform | Profile | Jobs Applied | Blocker |
-|----------|---------|--------------|---------|
-| LinkedIn | ✅ Complete | N/A | — |
-| Resume site | ✅ Live | N/A | — |
-| Strider | ✅ Synced | 🔄 Check/apply next | — |
-| Turing | ⚠️ Partial | ❌ None | Manual edits needed (bot detection) |
-| Toptal | ✅ Application submitted | 🔄 1 submitted | Awaiting response |
-| Arc.dev | 🔄 In progress | ❌ None | May require Google SSO account selection |
-| Lemon.io | 🔄 Under review | ❌ None | Awaiting profile review |
-| Workana | ⚠️ Partial | ❌ None | Manual intervention needed |
+| Platform | Account created? | Profile updated? | Human intervention |
+|----------|------------------|------------------|--------------------|
+| Indeed | Yes | Partial | None for access; leave current email unchanged |
+| Arc.dev | No | No | Sign in; choose correct Google account if prompted |
+| Toptal | No | No | Wait for Toptal follow-up / account invite |
+| Lemon.io | Yes | Partial | No immediate action unless Lemon requests edits |
+| Strider | Yes | Partial | Review/edit profile text against `resume.ts` only |
+| Turing | Yes | Partial | Manual dashboard edits required (bot detection) |
+| Workana | Yes | Partial | Manual profile edits required |
