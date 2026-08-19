@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/resume/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Résumé of Guilherme Ferreira, Full Stack Software Engineer with experience in distributed systems, manufacturing software, and enterprise applications."
+    />
+    <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Guilherme Ferreira — Full Stack Software Engineer" />
+    <meta
+      property="og:description"
+      content="Full Stack Software Engineer résumé — distributed systems, manufacturing software, and enterprise applications."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://guilheeeeeeerme.github.io/resume/" />
+    <link rel="canonical" href="https://guilheeeeeeerme.github.io/resume/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Guilherme Ferreira — Full Stack Software Engineer</title>
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem('resume-theme')
+          const mode =
+            stored === 'light' || stored === 'dark' || stored === 'system'
+              ? stored
+              : 'system'
+          const resolved =
+            mode === 'system'
+              ? window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+              : mode
+          document.documentElement.dataset.theme = resolved
+          document.documentElement.style.colorScheme = resolved
+        } catch (_) {}
+      })()
+    </script>
+    <script type="module" crossorigin src="/resume/assets/index-D6qpGWIU.js"></script>
+    <link rel="stylesheet" crossorigin href="/resume/assets/index-DvQ4ptxe.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
