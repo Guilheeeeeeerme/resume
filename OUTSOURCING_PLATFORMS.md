@@ -9,7 +9,7 @@ Last updated: 2026-08-19
 **Profile status:** Fully updated
 
 - About/summary rewritten (recruiter-focused, US-oriented)
-- All experience bullets updated: MachineMetrics, Creed Interactive, Mariner, B2ML, RZX, SaskPower, COPPE
+- All experience bullets updated: MachineMetrics, Creed Interactive, Mariner, B2ML, RZX, SaskPower, COPPE (LinkedIn/platforms only — omitted from printed résumé)
 - Education added: FCTECH MBA (2026–present), UNIFEI Master's (2019–2021, incomplete)
 - Skills updated: React, Angular, TypeScript, Node.js, NestJS, Docker, Keycloak, Python, C#, Java
 - Old resume PDFs deleted — only 2026-08-19 version remains
@@ -57,22 +57,35 @@ Last updated: 2026-08-19
 
 ---
 
-## Strider ⚠️ Account Reachable — Profile Partial
+## Strider ⚠️ Account Reachable — Profile Mostly Accurate
 
 **Account created?** Yes
 
-**Profile updated?** Partial
+**Profile updated?** Mostly (partial gaps remain)
 
 - Account is reachable and active in Strider's talent pool
-- Basic profile, role preferences, pay range, and English check appear completed
-- Jobsity appears removed from the experience list
-- Profile text was updated, but the current visible bio wording is not yet a strict `resume.ts` / LinkedIn-only mirror
-- Education accuracy was not fully re-verified in the latest visible profile state
+- Name, location, bio, pay rate ($5,000–$20,000/mo), job prefs, and work history match `resume.ts` / LinkedIn
+- No Jobsity/Turing entries; COPPE kept on Strider (omitted from printed résumé only)
+- MachineMetrics, Creed, Mariner, B2ML, RZX, SaskPower, COPPE present with source-aligned content
+- Main skills updated this session: React.js (6 yrs), Nest.js (2 yrs), TypeScript (8 yrs)
 
-**Human intervention needed:** No access blocker
+**Still partial:**
+- [ ] Add education: FCTECH MBA in Software Engineering with AI (2026–present)
+- [ ] Headline shows "Full-stack Developer" vs resume "Full Stack Software Engineer"
+- [ ] AngularJS (2 yrs) in main skills — not emphasized in source
+- [ ] Several experience descriptions marked "Weak" in Strider UI (content accurate)
+
+**Jobs applied:** 0
+
+**Jobs skipped (intentional):**
+- **Product Engineer** (only open role, ~27h window) — AI/LLM-heavy, requires Next.js; not in `resume.ts`
+- Other roles closed or past cycle
+
+**Human intervention needed:** Optional — add FCTECH MBA under Education if desired
 
 **Exact next step:**
-- [ ] Review the Strider profile text section-by-section and rewrite any non-source phrasing so it matches `resume.ts` / LinkedIn only
+- [ ] Add FCTECH MBA under Education at https://app.onstrider.com/profile
+- [ ] Decide whether to apply to Product Engineer before window closes (only if you want to pursue despite stack mismatch)
 
 ---
 
@@ -128,20 +141,32 @@ Last updated: 2026-08-19
 
 ---
 
-## Lemon.io ⚠️ Account Reachable — Profile Partial / Under Review
+## Lemon.io ⚠️ Account Reachable — Application Paused
 
 **Account created?** Yes
 
-**Profile updated?** Partial
+**Profile updated?** Partial (editing locked while paused)
 
-- Account is reachable
-- Registration/application is complete
-- Lemon.io shows the profile/application as paused while waiting for a future match
-- Current profile includes core specialization and rates, but Lemon still shows missing/unfinished profile areas such as time zone/working hours and recent project highlights
+- Account is reachable at https://me.lemon.io/profile
+- Application status: **paused** — "Sadly, no matching roles right now"
+- Stuck at Step 1: Profile review; no visible job listings to apply to
+- Project preferences (rate, timezone, hours) disabled while paused
 
-**Human intervention needed:** Maybe
+**Accurate:** Name, LinkedIn, GitHub, resume PDF, core stack, MachineMetrics project, UNIFEI bachelor + incomplete master's
 
-**Exact step:** No immediate action unless Lemon requests updates; if profile editing reopens, complete time zone, working hours, and 4+ recent projects using `resume.ts` / LinkedIn only
+**Gaps vs source (fix when/unpaused):**
+- Title: "Full-stack Web Developer | Senior" vs "Full Stack Software Engineer"
+- Rate $20–25/hr below $4,900/mo floor — raise min to ≥$31/hr when editable
+- Missing: FCTECH MBA, University of Regina, languages (English/Portuguese)
+- Experience highlights: 1 project (platform asks for 4+)
+- Timezone / working hours not set
+- Additional tech stack empty (Java, Python, C#, Microservices)
+
+**Jobs applied:** 0 (no roles visible)
+
+**Human intervention needed:** Check email — Lemon may have sent details on why profile doesn't match current client needs
+
+**Exact next step:** Wait for Lemon to reopen application; then complete profile gaps above
 
 ---
 
@@ -172,7 +197,7 @@ Last updated: 2026-08-19
 | Indeed | Yes | Partial | None for access; leave current email unchanged |
 | Arc.dev | No | No | Sign in; choose correct Google account if prompted |
 | Toptal | No | No | Wait for Toptal follow-up / account invite |
-| Lemon.io | Yes | Partial | No immediate action unless Lemon requests edits |
-| Strider | Yes | Partial | Review/edit profile text against `resume.ts` only |
+| Lemon.io | Yes | Partial (paused) | Check Lemon email; wait for unpause |
+| Strider | Yes | Mostly accurate | Optional: add FCTECH MBA; decide on Product Engineer |
 | Turing | Yes | Partial | Manual dashboard edits required (bot detection) |
 | Workana | Yes | Partial | Manual profile edits required |

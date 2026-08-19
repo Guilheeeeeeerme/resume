@@ -13,9 +13,13 @@ export function ExperienceItem({ job, expanded, onToggle }: Props) {
   return (
     <article className="job">
       <div className="job-header">
-        <h3 className="job-title">
-          {job.company} — {job.title}
-        </h3>
+        <div>
+          <h3 className="job-title">
+            <span className="job-company">{job.company}</span>
+            {' — '}
+            {job.title}
+          </h3>
+        </div>
         <p className="job-date">
           <time>{job.dates}</time>
         </p>

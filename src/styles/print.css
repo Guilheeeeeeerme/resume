@@ -8,14 +8,15 @@
   [data-theme='light'],
   [data-theme='dark'],
   html {
-    /* Force light, ink-friendly print regardless of screen theme */
     --background: #fff;
     --surface: #fff;
     --text: #111;
     --muted-text: #444;
-    --border: #bbb;
-    --accent: #1a4a3e;
-    --link: #0b3d6e;
+    --border: #ccc;
+    --accent: #1e3a4f;
+    --accent-dark: #1e293b;
+    --link: #1e3a4f;
+    --sidebar-bg: #f8f8f8;
     --page-chrome: #fff;
     color-scheme: light;
   }
@@ -46,50 +47,67 @@
   }
 
   .resume {
-    /* Shared safe area: A4 width × Letter height intersection */
     width: 100%;
     max-width: 210mm;
     min-height: 0;
     max-height: none;
     margin: 0 auto;
-    padding: 8mm 9mm 7mm;
+    padding: 0;
     border: none;
     box-shadow: none;
-    gap: 2.1mm;
-    font-size: 9pt;
-    line-height: 1.26;
+    font-size: 8.5pt;
+    line-height: 1.25;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     overflow: visible;
   }
 
   .resume-header {
-    gap: 1.2mm;
-    padding-bottom: 1.6mm;
+    padding: 5mm 7mm 4mm;
+    gap: 1mm;
   }
 
   h1 {
-    font-size: 15.5pt;
-    line-height: 1.1;
+    font-size: 16pt;
+    letter-spacing: 0.06em;
+    line-height: 1.05;
   }
 
   .headline {
-    font-size: 9.2pt;
-  }
-
-  .identity {
-    flex-wrap: nowrap;
+    font-size: 9pt;
+    letter-spacing: 0.02em;
   }
 
   .contact {
-    gap: 0.5mm 2.8mm;
-    font-size: 7.2pt;
-    line-height: 1.22;
+    gap: 0.5mm 3mm;
+    font-size: 7pt;
+    line-height: 1.2;
+    margin-top: 1.5mm;
   }
 
   .contact a {
-    color: var(--link);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Two-column print */
+  .resume-columns {
+    display: grid;
+    grid-template-columns: 62% 38%;
+    align-items: start;
+  }
+
+  .col-main {
+    padding: 3.5mm 4mm 3mm 7mm;
+    gap: 2mm;
+    border-right: 0.5pt solid #ccc;
+  }
+
+  .col-side {
+    padding: 3.5mm 7mm 3mm 4mm;
+    gap: 2mm;
+    background: #f8f8f8;
   }
 
   .resume-section {
@@ -97,105 +115,136 @@
   }
 
   .section-title {
-    font-size: 7.8pt;
-    letter-spacing: 0.06em;
-    padding-left: 1.5mm;
-    border-left-width: 1.5pt;
+    font-size: 7pt;
+    letter-spacing: 0.1em;
+    padding-bottom: 0.8mm;
+    border-bottom-width: 1pt;
+    margin-bottom: 0.5mm;
+    color: #1e3a4f;
   }
 
   .summary {
-    font-size: 8.5pt;
+    font-size: 8pt;
     line-height: 1.28;
-    max-width: none;
   }
 
+  /* Skills sidebar */
   .skills {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6mm 2.5mm;
-  }
-
-  .skill {
-    grid-template-columns: 26mm 1fr;
-    gap: 1.4mm;
+    gap: 0.5mm;
   }
 
   .skill-label {
-    font-size: 7.5pt;
+    font-size: 6.8pt;
   }
 
   .skill-value {
-    font-size: 7.7pt;
-    line-height: 1.22;
-  }
-
-  /* Keep keyword blob in the PDF text layer for ATS parsers */
-  .skills-keywords {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0 0 0.8mm;
-    padding: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-    font-size: 6.6pt;
+    font-size: 7.5pt;
     line-height: 1.2;
-    color: #333;
   }
 
+  /* Keep keyword blob in PDF text layer for ATS, hide visually to save space */
+  .skills-keywords {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Experience */
   .jobs {
-    gap: 1.8mm;
+    gap: 1.5mm;
   }
 
   .job {
-    gap: 0.55mm;
+    gap: 0.5mm;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   .job-title {
-    font-size: 8.7pt;
+    font-size: 8.5pt;
   }
 
   .job-date {
-    font-size: 7.3pt;
+    font-size: 7pt;
   }
 
   .job-highlights {
-    padding-left: 3.2mm;
-    gap: 0.4mm;
+    padding-left: 3mm;
+    gap: 0.35mm;
   }
 
   .job-highlights li {
-    font-size: 8pt;
-    line-height: 1.24;
+    font-size: 7.5pt;
+    line-height: 1.22;
   }
 
   .stack {
-    font-size: 7pt;
-    line-height: 1.18;
+    display: none;
   }
 
-  .footer-row {
-    gap: 2.5mm;
-    margin-top: 0.3mm;
+  /* Achievements */
+  .achievements-list {
+    gap: 1mm;
+  }
+
+  .achievement {
+    padding-left: 1.5mm;
+    border-left-width: 1pt;
+    gap: 0.1mm;
+  }
+
+  .achievement-title {
+    font-size: 7.8pt;
+  }
+
+  .achievement-desc {
+    font-size: 7.3pt;
+    line-height: 1.22;
+  }
+
+  /* Education */
+  .edu-list,
+  .lang-list {
+    gap: 1mm;
   }
 
   .edu strong {
-    font-size: 8pt;
+    font-size: 7.8pt;
   }
 
-  .edu span,
-  .lang-list {
+  .edu span {
+    font-size: 7pt;
+  }
+
+  .edu-dates {
+    font-size: 6.8pt !important;
+  }
+
+  .lang-list li {
     font-size: 7.5pt;
-  }
-
-  .edu-list,
-  .lang-list {
-    gap: 0.6mm;
   }
 
   a[href]::after {
     content: none;
+  }
+
+  .resume-print-footer {
+    margin: 0;
+    padding: 1mm 7mm 2mm;
+    border-top: 0.5pt solid #ccc;
+    font-size: 5.5pt;
+    line-height: 1.15;
+    color: #666;
+    text-align: center;
+  }
+
+  .resume-print-footer a {
+    color: #666;
   }
 }

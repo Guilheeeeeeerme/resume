@@ -22,7 +22,9 @@ export type ExperienceEntry = {
 export type EducationEntry = {
   degree: string
   school: string
+  dates?: string
   details?: string
+  note?: string
 }
 
 export type LanguageEntry = {
@@ -33,6 +35,11 @@ export type LanguageEntry = {
 export type ResumeLink = {
   label: string
   href: string
+}
+
+export type KeyAchievement = {
+  title: string
+  description: string
 }
 
 export type Resume = {
@@ -47,6 +54,7 @@ export type Resume = {
   skills: SkillGroup[]
   /** Plain keyword string for ATS / auto-readers. */
   skillsKeywords: string
+  keyAchievements: KeyAchievement[]
   experience: ExperienceEntry[]
   education: EducationEntry[]
   languages: LanguageEntry[]

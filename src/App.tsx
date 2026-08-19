@@ -4,6 +4,7 @@ import { Education } from './components/Education'
 import { ExpandControls } from './components/ExpandControls'
 import { Experience } from './components/Experience'
 import { Header } from './components/Header'
+import { KeyAchievements } from './components/KeyAchievements'
 import { Languages } from './components/Languages'
 import { PrintButton } from './components/PrintButton'
 import { Skills } from './components/Skills'
@@ -67,20 +68,39 @@ function App() {
           headline={resume.headline}
           contact={resume.contact}
         />
-        <Summary summary={resume.summary} />
-        <Skills
-          skills={resume.skills}
-          skillsKeywords={resume.skillsKeywords}
-        />
-        <Experience
-          experience={resume.experience}
-          expandedIds={expandedIds}
-          onToggle={toggle}
-        />
-        <div className="footer-row">
-          <Education education={resume.education} />
-          <Languages languages={resume.languages} />
+
+        <div className="resume-columns">
+          {/* Left column: Summary + Experience */}
+          <div className="col-main">
+            <Summary summary={resume.summary} />
+            <Experience
+              experience={resume.experience}
+              expandedIds={expandedIds}
+              onToggle={toggle}
+            />
+          </div>
+
+          {/* Right column: Key Achievements, Skills, Education, Languages */}
+          <div className="col-side">
+            <KeyAchievements achievements={resume.keyAchievements} />
+            <Skills
+              skills={resume.skills}
+              skillsKeywords={resume.skillsKeywords}
+            />
+            <Education education={resume.education} />
+            <Languages languages={resume.languages} />
+          </div>
         </div>
+
+        <footer className="resume-print-footer">
+          {'Printed on '}
+          {new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+          {' · Latest version: '}
+          <a href="https://guilheeeeeeerme.github.io/resume/" target="_blank" rel="noopener noreferrer">
+            guilheeeeeeerme.github.io/resume
+          </a>
+          {' — Online version may be more up to date'}
+        </footer>
       </main>
     </>
   )

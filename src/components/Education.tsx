@@ -15,6 +15,7 @@ export function Education({ education }: Props) {
           <li className="edu" key={edu.degree}>
             <strong>{edu.degree}</strong>
             <span>{edu.school}</span>
+            {edu.dates && <span className="edu-dates">{edu.dates}</span>}
           </li>
         ))}
       </ul>

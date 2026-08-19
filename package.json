@@ -10,8 +10,11 @@
     "preview": "vite preview",
     "print:a4": "node scripts/print-validate.mjs --format=a4",
     "print:letter": "node scripts/print-validate.mjs --format=letter",
-    "print:test": "node scripts/print-validate.mjs"
+    "print:test": "node scripts/print-validate.mjs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://guilheeeeeeerme.github.io/resume/",
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
@@ -21,6 +24,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
+    "gh-pages": "^6.3.0",
     "oxlint": "^1.75.0",
     "playwright": "^1.55.0",
     "typescript": "~6.0.2",
