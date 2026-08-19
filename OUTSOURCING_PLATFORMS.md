@@ -1,100 +1,156 @@
-# Outsourcing Platform Tracker
+# Outsourcing Platforms — Status Tracker
 
-**Goal:** Account created + profile fully updated on each platform.
-**Profile source of truth:** LinkedIn https://www.linkedin.com/in/guilheeeeeeerme/
-**Resume:** https://guilheeeeeeerme.github.io/resume/
-**Last updated:** 2026-08-19
+Last updated: 2026-08-19
 
 ---
 
-## Profile Reference
+## LinkedIn ✅ Complete
 
-- **Name:** Guilherme Augusto Ferreira
-- **Headline:** Full Stack Software Engineer
-- **Current role:** MachineMetrics, Software Engineer, Apr 2024–Present
-- **Skills:** React, Angular, TypeScript, Node.js, NestJS, Docker, Microservices, Java, Python, C#
-- **Languages:** Portuguese (native), English (fluent)
-- **Availability:** Open to full-time and contract opportunities. Monthly rate: $4,000 min / $4,900 current (negotiable).
-- **Resume PDF:** `/home/ferre/Projects/resume/versions/guilherme-ferreira-resume-2026-08-19.pdf`
-- **LinkedIn:** https://www.linkedin.com/in/guilheeeeeeerme/
+**Profile status:** Fully updated
 
----
+- About/summary rewritten (recruiter-focused, US-oriented)
+- All experience bullets updated: MachineMetrics, Creed Interactive, Mariner, B2ML, RZX, SaskPower, COPPE
+- Education added: FCTECH MBA (2026–present), UNIFEI Master's (2019–2021, incomplete)
+- Skills updated: React, Angular, TypeScript, Node.js, NestJS, Docker, Keycloak, Python, C#, Java
+- Old resume PDFs deleted — only 2026-08-19 version remains
+- Network notifications globally disabled
 
-## Platforms
+**Jobs applied:** N/A (not a job board)
 
-### ✅ [LinkedIn](https://www.linkedin.com/in/guilheeeeeeerme/)
-- **Status:** Complete
-- **Notes:** Profile fully updated. Old resume PDFs deleted; only the latest (`guilherme-ferreira-resume-2026-08-19.pdf`) remains.
+**Blockers:** None
 
 ---
 
-### ⚠️ [Turing](https://work.turing.com/dashboard/profile)
-- **Status:** Partial — logged in, bot detection blocked automation
-- **Manual steps:**
-  - [ ] Fix LinkedIn handle: `guilherme-ferreira-30141548` → `guilheeeeeeerme`
-  - [ ] Add experience: MachineMetrics, Software Engineer, Apr 2024–Present
-  - [ ] Add education: FCTECH MBA, 2026–Present
-  - [ ] Verify Skills tab includes: Python, C#, Microservices
+## Resume Site ✅ Live
+
+**URL:** https://guilheeeeeeerme.github.io/resume/
+
+- Two-column print layout, Inter + JetBrains Mono fonts, print-safe dark slate palette
+- Key Achievements sidebar
+- All experience sorted, dates fixed, skills updated
+- Footer with print date + GitHub Pages URL
+- PDF archived: `versions/guilherme-ferreira-resume-2026-08-19.pdf`
+
+**Blockers:** None
 
 ---
 
-### 🔄 [Strider](https://app.onstrider.com/profile)
-- **Status:** In Progress — agent hit file chooser modal, login status unknown
-- **To do:**
-  - [ ] Confirm login status
-  - [ ] Update all profile fields to match LinkedIn
-  - [ ] Upload resume PDF: `guilherme-ferreira-resume-2026-08-19.pdf`
+## Strider ⚠️ Partial
+
+**Profile status:** Partially updated
+
+- Bio updated ✅
+- MachineMetrics added with strong description ✅
+- Jobsity: deletion attempted (confirm it was removed)
+- Mariner: still has weak description — needs "staffing intermediary" note or cleanup
+- Education: FCTECH MBA and UNIFEI Master's NOT yet added
+
+**Jobs applied:** 🔄 Agent was running to apply to matching positions — confirm status
+
+**Blockers:**
+- Lemon.io onboarding was intercepting the shared Playwright browser
+- Once Lemon.io is unblocked, resume Strider job applications
+
+**Manual steps remaining:**
+- [ ] Confirm Jobsity was deleted
+- [ ] Fix Mariner description (add staffing intermediary note)
+- [ ] Add FCTECH MBA education
+- [ ] Add UNIFEI Master's education
+- [ ] Confirm jobs were applied
 
 ---
 
-### ⚠️ [Workana](https://www.workana.com/freelancer/e4319be15eb99e9c2630b4653f08eece)
-- **Status:** Partial — headline, rate, and bio set; manual steps remain
-- **Done:**
-  - [x] Headline: "Full Stack Developer"
-  - [x] Hourly rate: BRL 150/hora
-  - [x] About/bio: updated in English
-- **Manual steps:**
-  - [ ] Habilidades: Delete Java → add React (5-10yr), TypeScript (3-5yr), Node.js (3-5yr)
-  - [ ] Idiomas: Add Português (nativo)
-  - [ ] Experiência profissional: Update old Java/Cordova text to reflect current stack
-  - [ ] Carregar CV: Upload `versions/guilherme-ferreira-resume-2026-08-19.pdf`
+## Turing ⚠️ Partial — Manual Needed
+
+**Profile status:** Logged in, automation blocked by bot detection
+
+**Manual steps at** https://work.turing.com/dashboard/profile:
+- [ ] Fix LinkedIn handle: `guilherme-ferreira-30141548` → `guilheeeeeeerme`
+- [ ] Add experience: MachineMetrics, Software Engineer, Apr 2024–Present
+- [ ] Add education: FCTECH MBA, 2026–present
+- [ ] Verify skills tab: Python, C#, Microservices
+
+**Jobs applied:** ❌ None yet
+
+**Blockers:** Bot detection prevents automation — all changes must be done manually
 
 ---
 
-### ❌ [Toptal](https://www.toptal.com/freelance-jobs/developers/requirements#apply)
-- **Status:** Blocked — no Google SSO; LinkedIn SSO requires cookies not available in Playwright session
-- **Blocker:** LinkedIn session cookies needed for SSO
-- **To do:**
-  - [ ] Import LinkedIn cookies OR log in manually
-  - [ ] Sign up via "Sign Up with LinkedIn" at https://www.toptal.com/freelance-jobs/developers/requirements#apply
-  - [ ] Complete profile to match LinkedIn
-  - [ ] Upload resume PDF
+## Toptal 🔄 Applied — Awaiting Response
+
+**Profile status:** Application submitted
+
+- Applied to Engineering Manager position via form
+- Form filled: name, email, resume upload, LinkedIn, GitHub, all 3 written answers, country Brazil
+
+**Jobs applied:** 🔄 1 submitted (Engineering Manager)
+
+**Blockers:** Awaiting response from Toptal
 
 ---
 
-### ❌ [Arc.dev](https://arc.dev/developer/sign_up)
-- **Status:** Not started — browser redirect loop + OAuth safety block during automation
-- **Blocker:** Requires manual signup
-- **To do:**
-  - [ ] Go to https://arc.dev/developer/sign_up
-  - [ ] Sign up via "Continue with Google"
-  - [ ] Fill profile to match LinkedIn
-  - [ ] Upload resume PDF
+## Arc.dev 🔄 In Progress
+
+**Profile status:** Login attempted via Google SSO
+
+- Agent attempted Google SSO login at https://arc.dev/login
+- May require manual Google account selection
+
+**Jobs applied:** ❌ None yet
+
+**Blockers:**
+- [ ] Complete Google SSO login (may need user to select account manually)
+- [ ] Complete profile after login
+- [ ] Apply to jobs
 
 ---
 
-### ❌ [Lemon.io](https://me.lemon.io/escape-the-matrix)
-- **Status:** Blocked — browser busy/conflicted during automation
-- **Blocker:** Requires cookie import or manual login
-- **To do:**
-  - [ ] Import cookies OR go to https://me.lemon.io/escape-the-matrix manually
-  - [ ] Sign up via Google or LinkedIn SSO
-  - [ ] Fill profile to match LinkedIn
-  - [ ] Upload resume PDF
-  - [ ] Select both "Full-time" and "Contract/freelance" availability (if only one allowed, choose full-time)
+## Lemon.io ❌ Blocked — User Action Required
+
+**Profile status:** Onboarding started, stuck at steps 5–8
+
+**URL:** https://me.lemon.io/escape-the-matrix
+
+**⚠️ USER ACTION REQUIRED:**
+Complete steps 5–8:
+1. Technologies
+2. Availability
+3. Rate
+4. Registration
+
+**Jobs applied:** ❌ None yet
+
+**Blockers:** This is also blocking the shared Playwright browser used for other platform automation. Must be resolved first.
 
 ---
 
-### 🪦 [Andela](https://andela.com)
-- **Status:** Dead — platform shut down for individual developers
-- **Notes:** Talent migrated to Arc.dev. No action needed; covered by Arc.dev entry above.
+## Workana ⚠️ Partial — Manual Needed
+
+**Profile status:** Partially updated
+
+- Headline, rate, bio updated ✅
+
+**Manual steps at** https://www.workana.com/freelancer/e4319be15eb99e9c2630b4653f08eece:
+- [ ] Habilidades: Delete Java → add React, TypeScript, Node.js
+- [ ] Idiomas: Add Português (nativo)
+- [ ] Experiência profissional: Update old text
+- [ ] Carregar CV: Upload `versions/guilherme-ferreira-resume-2026-08-19.pdf`
+
+**Jobs applied:** ❌ None yet
+
+**Blockers:** Manual edits required (automation not attempted)
+
+---
+
+## Summary Table
+
+| Platform | Profile | Jobs Applied | Blocker |
+|----------|---------|--------------|---------|
+| LinkedIn | ✅ Complete | N/A | — |
+| Resume site | ✅ Live | N/A | — |
+| Strider | ⚠️ Partial | 🔄 Applying | Lemon.io was blocking browser |
+| Turing | ⚠️ Partial | ❌ None | Manual edits needed (bot detection) |
+| Toptal | 🔄 Applied | 🔄 1 submitted | Awaiting response |
+| Arc.dev | 🔄 In progress | ❌ None | Google SSO login needed |
+| Lemon.io | ❌ Blocked | ❌ None | **USER ACTION: complete onboarding steps 5–8** |
+| Workana | ⚠️ Partial | ❌ None | Manual edits needed |
