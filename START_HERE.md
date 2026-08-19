@@ -9,29 +9,32 @@ Resume from where we left off.
 |----------|---------|--------------|---------|
 | LinkedIn | ✅ Complete | N/A | — |
 | Resume site | ✅ Live | N/A | https://guilheeeeeeerme.github.io/resume/ |
-| Strider | ⚠️ Partial | 🔄 Applying | Lemon.io blocking browser |
-| Turing | ⚠️ Partial | ❌ None | Manual edits needed |
-| Toptal | 🔄 Applied | 🔄 1 submitted | Awaiting response |
-| Arc.dev | 🔄 In progress | ❌ None | Google SSO login needed |
-| Lemon.io | ❌ Blocked | ❌ None | **USER ACTION: complete onboarding** |
-| Workana | ⚠️ Partial | ❌ None | Manual edits needed |
+| Strider | ✅ Synced | 🔄 Check/apply next | — |
+| Turing | ⚠️ Partial | ❌ None | Manual intervention needed |
+| Toptal | ✅ Application submitted | 🔄 1 submitted | Awaiting response |
+| Arc.dev | 🔄 In progress | ❌ None | May require Google account selection |
+| Lemon.io | 🔄 Under review | ❌ None | Awaiting profile review |
+| Workana | ⚠️ Partial | ❌ None | Manual intervention needed |
 
 ## First Thing To Do
 
-1. **Complete Lemon.io onboarding** (2 min):
-   → https://me.lemon.io/escape-the-matrix
-   → Complete steps 5–8: technologies, availability, rate, registration
-   → This unblocks the Playwright browser for all other automation
+1. **Continue Indeed on the current logged-in account**:
+   → Do not change the email/account
+   → Finish profile/resume setup as far as possible
+   → Apply to at least 1 matching remote Full Stack / React / Node / TypeScript role if possible
 
-2. **Turing manual edits** (5 min):
+2. **Continue Arc.dev**:
+   → Resume login/setup
+   → If Google account selection/approval appears, stop and ask the user to take over
+   → Otherwise complete profile and apply to at least 1 matching role if possible
+
+3. **Turing manual intervention**:
    → https://work.turing.com/dashboard/profile
-   → Fix LinkedIn handle, add MachineMetrics, add FCTECH MBA, verify skills
+   → Still requires manual fixes / bot-blocked flow
 
-3. **Workana manual edits** (5 min):
+4. **Workana manual intervention**:
    → https://www.workana.com/freelancer/e4319be15eb99e9c2630b4653f08eece
-   → Fix skills, add Portuguese, update experience, upload resume PDF
-
-4. **Tell the AI**: "Resume outsourcing work" — it will pick up from here
+   → Still requires manual profile updates
 
 ## Key Files
 - Resume app: `/home/ferre/Projects/resume/src/`
@@ -40,9 +43,9 @@ Resume from where we left off.
 - LinkedIn: https://www.linkedin.com/in/guilheeeeeeerme/
 
 ## Session Goal (Remaining)
-- [ ] Lemon.io: complete profile + apply to 1 job
-- [ ] Arc.dev: complete profile + apply to 1 job
-- [ ] Turing: fix manual items + apply to 1 job
-- [ ] Workana: fix manual items + apply to 1 job
-- [ ] Strider: confirm Jobsity deleted + apply confirmed
-- [ ] Toptal: monitor Engineering Manager application response
+- [ ] Indeed: finish setup + apply to 1 matching role if possible
+- [ ] Arc.dev: complete profile + apply to 1 matching role if possible
+- [ ] Turing: manual intervention + apply to 1 job later
+- [ ] Workana: manual intervention + apply to 1 job later
+- [ ] Monitor Lemon.io profile review
+- [ ] Monitor Toptal Engineering Manager application response

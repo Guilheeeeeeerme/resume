@@ -35,28 +35,19 @@ Last updated: 2026-08-19
 
 ---
 
-## Strider ⚠️ Partial
+## Strider ✅ Synced
 
-**Profile status:** Partially updated
+**Profile status:** Sync complete
 
-- Bio updated ✅
-- MachineMetrics added with strong description ✅
-- Jobsity: deletion attempted (confirm it was removed)
-- Mariner: still has weak description — needs "staffing intermediary" note or cleanup
-- Education: FCTECH MBA and UNIFEI Master's NOT yet added
+- Profile sync completed
+- No current blocker recorded for profile sync
 
-**Jobs applied:** 🔄 Agent was running to apply to matching positions — confirm status
+**Jobs applied:** Review/apply next as needed
 
-**Blockers:**
-- Lemon.io onboarding was intercepting the shared Playwright browser
-- Once Lemon.io is unblocked, resume Strider job applications
+**Blockers:** None for profile sync
 
 **Manual steps remaining:**
-- [ ] Confirm Jobsity was deleted
-- [ ] Fix Mariner description (add staffing intermediary note)
-- [ ] Add FCTECH MBA education
-- [ ] Add UNIFEI Master's education
-- [ ] Confirm jobs were applied
+- [ ] Confirm next matching applications, if any
 
 ---
 
@@ -91,40 +82,34 @@ Last updated: 2026-08-19
 
 ## Arc.dev 🔄 In Progress
 
-**Profile status:** Login attempted via Google SSO
+**Profile status:** Login/setup not yet completed
 
-- Agent attempted Google SSO login at https://arc.dev/login
-- May require manual Google account selection
+- May still require manual Google account selection during SSO
 
 **Jobs applied:** ❌ None yet
 
 **Blockers:**
-- [ ] Complete Google SSO login (may need user to select account manually)
+- [ ] Continue login/setup
+- [ ] If Google account picker appears, user must choose the correct account manually
 - [ ] Complete profile after login
 - [ ] Apply to jobs
 
 ---
 
-## Lemon.io ❌ Blocked — User Action Required
+## Lemon.io 🔄 Under Review
 
-**Profile status:** Onboarding started, stuck at steps 5–8
+**Profile status:** Account/registration complete
 
-**URL:** https://me.lemon.io/escape-the-matrix
-
-**⚠️ USER ACTION REQUIRED:**
-Complete steps 5–8:
-1. Technologies
-2. Availability
-3. Rate
-4. Registration
+- Registration completed
+- Profile submitted and currently under review
 
 **Jobs applied:** ❌ None yet
 
-**Blockers:** This is also blocking the shared Playwright browser used for other platform automation. Must be resolved first.
+**Blockers:** Awaiting Lemon.io profile review
 
 ---
 
-## Workana ⚠️ Partial — Manual Needed
+## Workana ⚠️ Partial — Manual Intervention Needed
 
 **Profile status:** Partially updated
 
@@ -138,7 +123,7 @@ Complete steps 5–8:
 
 **Jobs applied:** ❌ None yet
 
-**Blockers:** Manual edits required (automation not attempted)
+**Blockers:** Manual intervention required (automation not completed)
 
 ---
 
@@ -148,9 +133,9 @@ Complete steps 5–8:
 |----------|---------|--------------|---------|
 | LinkedIn | ✅ Complete | N/A | — |
 | Resume site | ✅ Live | N/A | — |
-| Strider | ⚠️ Partial | 🔄 Applying | Lemon.io was blocking browser |
+| Strider | ✅ Synced | 🔄 Check/apply next | — |
 | Turing | ⚠️ Partial | ❌ None | Manual edits needed (bot detection) |
-| Toptal | 🔄 Applied | 🔄 1 submitted | Awaiting response |
-| Arc.dev | 🔄 In progress | ❌ None | Google SSO login needed |
-| Lemon.io | ❌ Blocked | ❌ None | **USER ACTION: complete onboarding steps 5–8** |
-| Workana | ⚠️ Partial | ❌ None | Manual edits needed |
+| Toptal | ✅ Application submitted | 🔄 1 submitted | Awaiting response |
+| Arc.dev | 🔄 In progress | ❌ None | May require Google SSO account selection |
+| Lemon.io | 🔄 Under review | ❌ None | Awaiting profile review |
+| Workana | ⚠️ Partial | ❌ None | Manual intervention needed |
