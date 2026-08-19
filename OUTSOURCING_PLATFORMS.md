@@ -14,6 +14,7 @@
 - **Current role:** MachineMetrics, Software Engineer, Apr 2024–Present
 - **Skills:** React, Angular, TypeScript, Node.js, NestJS, Docker, Microservices, Java, Python, C#
 - **Languages:** Portuguese (native), English (fluent)
+- **Availability:** Open to full-time and contract opportunities. Monthly rate: $4,000 min / $4,900 current (negotiable).
 - **Resume PDF:** `/home/ferre/Projects/resume/versions/guilherme-ferreira-resume-2026-08-19.pdf`
 - **LinkedIn:** https://www.linkedin.com/in/guilheeeeeeerme/
 
@@ -83,6 +84,7 @@
   - [ ] Sign up via Google or LinkedIn SSO
   - [ ] Fill profile to match LinkedIn
   - [ ] Upload resume PDF
+  - [ ] Select both "Full-time" and "Contract/freelance" availability (if only one allowed, choose full-time)
 
 ---
 
