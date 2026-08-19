@@ -23,7 +23,7 @@
 
 ### ✅ [LinkedIn](https://www.linkedin.com/in/guilheeeeeeerme/)
 - **Status:** Complete
-- **Notes:** Profile fully updated. Resume cleanup agent running to delete old resumes and keep latest.
+- **Notes:** Profile fully updated. Old resume PDFs deleted; only the latest (`guilherme-ferreira-resume-2026-08-19.pdf`) remains.
 
 ---
 
