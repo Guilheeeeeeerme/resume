@@ -25,6 +25,8 @@ export type EducationEntry = {
   dates?: string
   details?: string
   note?: string
+  /** Website only — omitted from Letter PDF to free sidebar space. */
+  screenOnly?: boolean
 }
 
 export type LanguageEntry = {
@@ -42,6 +44,18 @@ export type KeyAchievement = {
   description: string
 }
 
+export type ProjectEntry = {
+  id: string
+  name: string
+  tagline: string
+  /** Short public blurb for the sidebar. */
+  summary: string
+  /** Live demo / app URL. */
+  href: string
+  /** Public GitHub repository URL. */
+  repoHref: string
+}
+
 export type Resume = {
   name: string
   headline: string
@@ -50,11 +64,16 @@ export type Resume = {
   email: ContactItem
   links: ResumeLink[]
   contact: ContactItem[]
+  /** First-person résumé summary (Toptal About stays third person when pasting). */
   summary: string
+  /** Toptal “most amazing…” differentiator — one specific shipped story. */
+  mostAmazing: string
   skills: SkillGroup[]
   /** Plain keyword string for ATS / auto-readers. */
   skillsKeywords: string
   keyAchievements: KeyAchievement[]
+  /** Public NDA-safe demos (Made, not Did). */
+  projects: ProjectEntry[]
   experience: ExperienceEntry[]
   education: EducationEntry[]
   languages: LanguageEntry[]

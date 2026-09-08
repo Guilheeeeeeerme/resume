@@ -43,9 +43,6 @@ async function validateFormat(browser, baseUrl, formatKey) {
 
   await page.goto(baseUrl, { waitUntil: 'networkidle' })
 
-  // Expand details — print CSS must still hide them
-  await page.getByRole('button', { name: 'Expand all' }).click()
-
   const pdfPath = path.join(outDir, `resume-${format.name}.pdf`)
   const pdf = await page.pdf({
     path: pdfPath,
@@ -84,8 +81,12 @@ async function validateFormat(browser, baseUrl, formatKey) {
     const cs = resume ? getComputedStyle(resume) : null
     return {
       toolbarHidden: !toolbar || getComputedStyle(toolbar).display === 'none',
-      moreHidden: moreBtns.every((el) => getComputedStyle(el).display === 'none'),
-      extendedHidden: extended.every((el) => getComputedStyle(el).display === 'none'),
+      moreHidden:
+        moreBtns.length === 0 ||
+        moreBtns.every((el) => getComputedStyle(el).display === 'none'),
+      extendedHidden:
+        extended.length === 0 ||
+        extended.every((el) => getComputedStyle(el).display === 'none'),
       resumeBg: cs?.backgroundColor ?? null,
       resumeColor: cs?.color ?? null,
       overflowX: resume ? resume.scrollWidth > resume.clientWidth + 1 : false,

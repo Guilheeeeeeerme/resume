@@ -1,12 +1,11 @@
-import { useCallback, useMemo, useState } from 'react'
 import { resume } from './data/resume'
 import { Education } from './components/Education'
-import { ExpandControls } from './components/ExpandControls'
 import { Experience } from './components/Experience'
 import { Header } from './components/Header'
 import { KeyAchievements } from './components/KeyAchievements'
 import { Languages } from './components/Languages'
 import { PrintButton } from './components/PrintButton'
+import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
 import { Summary } from './components/Summary'
 import { ThemeToggle } from './components/ThemeToggle'
@@ -15,32 +14,6 @@ import { useTheme } from './hooks/useTheme'
 
 function App() {
   const { mode, cycleMode } = useTheme()
-  const [expandedIds, setExpandedIds] = useState<Set<string>>(() => new Set())
-
-  const allIds = useMemo(
-    () => resume.experience.map((job) => job.id),
-    [],
-  )
-
-  const allExpanded =
-    allIds.length > 0 && allIds.every((id) => expandedIds.has(id))
-
-  const toggle = useCallback((id: string) => {
-    setExpandedIds((prev) => {
-      const next = new Set(prev)
-      if (next.has(id)) next.delete(id)
-      else next.add(id)
-      return next
-    })
-  }, [])
-
-  const expandAll = useCallback(() => {
-    setExpandedIds(new Set(allIds))
-  }, [allIds])
-
-  const collapseAll = useCallback(() => {
-    setExpandedIds(new Set())
-  }, [])
 
   return (
     <>
@@ -51,14 +24,9 @@ function App() {
 
       <div className="toolbar screen-only" role="toolbar" aria-label="Résumé controls">
         <ThemeToggle mode={mode} onCycle={cycleMode} />
-        <ExpandControls
-          allExpanded={allExpanded}
-          onExpandAll={expandAll}
-          onCollapseAll={collapseAll}
-        />
         <PrintButton />
         <p className="toolbar-hint">
-          Print / Save as PDF uses a one-page layout (A4 or US Letter).
+          Print / Save as PDF targets one page on US Letter.
         </p>
       </div>
 
@@ -70,18 +38,13 @@ function App() {
         />
 
         <div className="resume-columns">
-          {/* Left column: Summary + Experience */}
           <div className="col-main">
-            <Summary summary={resume.summary} />
-            <Experience
-              experience={resume.experience}
-              expandedIds={expandedIds}
-              onToggle={toggle}
-            />
+            <Summary summary={resume.summary} mostAmazing={resume.mostAmazing} />
+            <Experience experience={resume.experience} />
           </div>
 
-          {/* Right column: Key Achievements, Skills, Education, Languages */}
           <div className="col-side">
+            <Projects projects={resume.projects} />
             <KeyAchievements achievements={resume.keyAchievements} />
             <Skills
               skills={resume.skills}

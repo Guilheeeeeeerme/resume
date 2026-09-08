@@ -1,13 +1,14 @@
 import type { Resume } from '../types/resume'
 
 /**
- * Sole factual source for résumé content.
+ * Sole factual source for résumé + Toptal-aligned copy.
  * printHighlights → one-page print + default website view
- * extendedHighlights → website-only expanded details
+ * extendedHighlights → website-only product/tech depth
+ * projects → public NDA-safe demos (Made, not Did)
  */
 export const resume: Resume = {
   name: 'Guilherme Ferreira',
-  headline: 'Full Stack Software Engineer',
+  headline: 'Software Engineer · AI Systems & Spec-Driven Delivery',
   location: 'Itajubá, MG, Brazil',
   phone: {
     label: '+55 35 98869-5696',
@@ -48,28 +49,60 @@ export const resume: Resume = {
     },
   ],
   summary:
-    'Full Stack Software Engineer with 10+ years of experience building distributed systems, enterprise applications, and manufacturing software. Strong expertise in the JavaScript and TypeScript ecosystems, with a focus on Domain-Driven Design, event-driven architectures, and enterprise integrations. Two years of hands-on AI-assisted development using Claude, Cursor, and OpenCode for spec-driven delivery, PRD-based feature design, parallel worktree development, subagent orchestration, and AI-powered PR review. Experienced in designing and evolving software for manufacturing, financial services, and real-time systems. Fluent in English and experienced collaborating with distributed international teams.',
+    'I am a software engineer with 10+ years shipping distributed systems for manufacturing, financial services, and real-time operations — including MES at MachineMetrics and platforms deployed in offshore oil and gas. I specialize in TypeScript/JavaScript full-stack engineering, always-on shop-floor UIs, and AI systems (LLM orchestration, VLM pipelines, tenant isolation, OWASP LLM Top 10 guardrails), delivered through spec-driven development with agent workflows. Clients rely on me for pragmatic architecture, measurable performance on data-heavy interfaces, and clear collaboration with distributed international teams.',
+  mostAmazing:
+    'Hardened MachineMetrics’ React MES — a 24/7, data-heavy manufacturing execution product on high-volume IoT + ERP streams — shipping Waiting For Work and palletized-machine workflows where a stalled UI stops the floor, not just a tab.',
   keyAchievements: [
     {
-      title: 'Full-Stack Product Owner — Offshore Oil & Gas',
+      title: 'MachineMetrics MES — critical shop-floor product',
       description:
-        'Architected and delivered RZX Tecnologia\'s core platform from the ground up — sole owner of every feature, selected for offshore deployment in live oil & gas operations. Product survived acquisition, became Cognittiv, and continues operating today.',
+        'Always-on MES on IoT + ERP: WFW, palletized machines, FAI, labor, scheduling — live UIs that cannot stall mid-shift under bursty machine data.',
     },
     {
-      title: 'Fintech Technical Lead — Banking & Transit Payments',
+      title: 'Offshore oil & gas platform (RZX → Cognittiv)',
       description:
-        'Led architecture and delivery of a microservices payment platform at B2ML connecting dozens of public-transit recharge providers, homologating a POS system from scratch, and meeting all banking security and compliance requirements under COVID-driven deadline pressure.',
+        'Built the core industrial platform end to end; selected for offshore deployment, later expanded as Cognittiv, still running in production.',
     },
     {
-      title: 'High-Stakes Outsourcing — IoT & Manufacturing at Scale',
+      title: 'Fintech payments lead (B2ML)',
       description:
-        'Delivered production features and resolved support escalations at MachineMetrics in a complex manufacturing domain — shipping MES capabilities on a high-volume IoT + ERP data platform with zero ramp-up time.',
+        'Led microservices transit payments, POS homologation from scratch, and banking security under COVID-driven deadline pressure.',
+    },
+  ],
+  projects: [
+    {
+      id: 'promptdesk',
+      name: 'Promptdesk',
+      tagline: 'Multi-tenant AI support',
+      summary:
+        'LLM support demo: cost-ranked model failover, SSO MFEs, guidelines as chat context without leaking tenant claims.',
+      href: 'https://app.promptdesk.ferredemo.dev',
+      repoHref: 'https://github.com/Guilheeeeeeerme/promptdesk',
+    },
+    {
+      id: 'argus',
+      name: 'Argus',
+      tagline: 'AI vision triage',
+      summary:
+        'VLM triage demo: Postgres RLS multi-tenancy, edge cameras, real-time operator MFE for company-scoped decisions.',
+      href: 'https://app.argus.ferredemo.dev',
+      repoHref: 'https://github.com/Guilheeeeeeerme/argus',
+    },
+    {
+      id: 'quizzeira',
+      name: 'Quizzeira',
+      tagline: 'AI quiz grading',
+      summary:
+        'Educational AI demo: async grading workers, answer-key isolation from the UI, rate-limited APIs.',
+      href: 'https://app.quizzeira.ferredemo.dev',
+      repoHref: 'https://github.com/Guilheeeeeeerme/quizzeira',
     },
   ],
   skills: [
     {
-      label: 'Core',
-      value: 'React, Angular, TypeScript, Node.js, NestJS, Docker, Microservices',
+      label: 'Featured',
+      value:
+        'TypeScript, React, Angular, Node.js, NestJS, LLM Systems, Spec-Driven Development, Claude, Cursor, OpenCode, Subagents, Microservices',
     },
     {
       label: 'Languages',
@@ -77,31 +110,38 @@ export const resume: Resume = {
     },
     {
       label: 'Frontend',
-      value: 'React, Angular, Redux, NgRx, Micro Frontends, HTML/CSS',
+      value:
+        'React, Angular, Redux, NgRx, Micro Frontends, Virtualization, OnPush / memoized renders',
     },
     {
       label: 'Backend',
-      value: 'Node.js, NestJS, Express, .NET Core, REST APIs, GraphQL, Hasura, Keycloak',
+      value:
+        'Node.js, NestJS, Express, Fastify, FastAPI, .NET Core, REST, GraphQL, Hasura, Keycloak',
     },
     {
-      label: 'Databases & Messaging',
-      value: 'MySQL, PostgreSQL, Redis, RabbitMQ, NATS',
+      label: 'Data & Messaging',
+      value: 'MySQL, PostgreSQL (RLS), Redis, RabbitMQ, NATS, BullMQ, WebSockets',
     },
     {
-      label: 'Tools & Infra',
-      value: 'Docker, Git, Keycloak, REST APIs, GraphQL, Kubernetes (basic), AWS, Azure, GitHub Actions',
+      label: 'Infra',
+      value: 'Docker, Git, Kubernetes (basic), AWS, Azure, GitHub Actions, MinIO, Workers',
     },
     {
       label: 'Architecture',
-      value: 'Domain-Driven Design (DDD), Event-Driven Architecture, Microservices, Distributed Systems, Manufacturing Execution Systems (MES)',
+      value: 'DDD, Event-Driven Architecture, Microservices, Distributed Systems, MES',
     },
     {
-      label: 'AI-Assisted Development',
-      value: 'Claude, Cursor, OpenCode, GitHub Copilot, Spec-Driven Development, PRD, Skills, Subagents, Worktrees, Parallel Development, AI PR Review',
+      label: 'AI Systems',
+      value:
+        'LLM orchestration, multi-provider failover, VLM pipelines, rate limiting, tenant isolation, OWASP LLM Top 10, token/cost controls',
+    },
+    {
+      label: 'Agent Delivery',
+      value: 'SDD, PRD, Skills, Worktrees, Parallel Development, AI PR Review',
     },
   ],
   skillsKeywords:
-    'JavaScript, TypeScript, Java, Python, C#, .NET, React, Angular, Redux, NgRx, Micro Frontends, HTML, CSS, Node.js, NestJS, Express, .NET Core, REST APIs, GraphQL, Hasura, Keycloak, MySQL, PostgreSQL, Redis, RabbitMQ, NATS, Docker, Git, Kubernetes, AWS, Azure, GitHub Actions, Domain-Driven Design, DDD, Event-Driven Architecture, Microservices, Distributed Systems, Manufacturing Execution Systems, MES, AI-Assisted Development, Spec-Driven Development, PRD, Claude, Cursor, OpenCode, GitHub Copilot, Full Stack Software Engineer',
+    'TypeScript, React, Angular, Node.js, NestJS, LLM Systems, Spec-Driven Development, Microservices, JavaScript, Java, Python, C#, .NET, Redux, NgRx, Micro Frontends, Express, Fastify, FastAPI, GraphQL, Hasura, Keycloak, MySQL, PostgreSQL, Redis, RabbitMQ, NATS, BullMQ, WebSockets, Docker, AWS, Azure, GitHub Actions, Domain-Driven Design, Event-Driven Architecture, Manufacturing Execution Systems, MES, VLM, OWASP LLM Top 10, Claude, Cursor, OpenCode, Software Engineer',
   experience: [
     {
       id: 'machinemetrics',
@@ -109,22 +149,22 @@ export const resume: Resume = {
       title: 'Full Stack Software Engineer',
       dates: 'Apr 2024 – Present',
       printHighlights: [
-        'Develop enterprise manufacturing software used by CNC operators and production teams across shop-floor workflows.',
-        'Designed and implemented MES capabilities supporting multiple operational models, including ERP-driven, labor-based, and legacy production workflows.',
-        'Led the implementation of the Waiting For Work (WFW) workflow and support for palletized machines using event-driven orchestration.',
-        'Delivered features including First Article Inspection, labor reporting, part counting, scheduling improvements, and ETTC calculations.',
-        'Applied AI-assisted development workflows (Claude, Cursor, OpenCode) for spec-driven delivery, PRD-based feature design, parallel worktree development, subagent orchestration, and AI-powered PR review.',
-        'Own technical design, domain modeling, API design, database migrations, production support, and incident investigation for assigned features.',
+        'Delivered React MES for CNC operators on a high-volume IoT + ERP platform — features that map how shops schedule, execute, and recover work mid-shift.',
+        'Shipped Waiting For Work, palletized machines, FAI, labor reporting, part counting, scheduling, and ETTC across ERP-driven, labor-based, and legacy production models.',
+        'Hardened 24/7 shop-floor UIs with WebSockets, web workers, Redux-style state, and microservice middleware isolating telemetry ingest from domain rules and presentation.',
+        'Kept live grids usable under bursty machine events via list virtualization and memoized selective re-renders — avoiding full-tree refreshes on every update.',
+        'Owned APIs, migrations, and production incidents end to end; drove SDD with agent orchestration so product intent stayed explicit under manufacturing constraints.',
+        'Bridged ERP intent and machine reality so idle time, pallet queues, first-article checks, and labor stayed coherent for operators mid-shift.',
       ],
       extendedHighlights: [
-        'Work spans scheduling, execution, and shop-floor operations.',
-        'Stack on this role: React, Node.js, TypeScript, GraphQL, Hasura, MySQL, Redis, NATS.',
-        'AI-assisted development: Claude, Cursor, OpenCode, GitHub Copilot — spec-driven development, PRDs, skills, subagents, worktrees, parallel development.',
+        'Delivery depth: PRDs and specs drive parallel worktrees and subagent review so event flows, migrations, and failure modes land before code volume grows.',
       ],
       technologies: [
         'React',
         'Node.js',
         'TypeScript',
+        'WebSockets',
+        'Workers',
         'MySQL',
         'Redis',
         'NATS',
@@ -133,51 +173,30 @@ export const resume: Resume = {
       ],
     },
     {
-      id: 'creed',
-      company: 'Creed Interactive',
-      title: 'Outsourced Software Engineer / Consultant',
-      dates: 'Nov 2022 – Apr 2024',
+      id: 'creed-mariner',
+      company: 'Creed Interactive · Mariner',
+      title: 'Software Engineer / Consultant',
+      dates: 'Jul 2021 – Apr 2024',
       printHighlights: [
-        'Maintained and upgraded a suite of Micro Frontend (MFE) applications built in Angular and React, improving platform stability and developer experience across a shared monorepo.',
-        'Led the migration of a family of SSO systems to Keycloak, enabling centralized identity federation and streamlining authentication across multiple enterprise products.',
-        'Architected and delivered a super-app navigation layer connecting multiple MFE products under a unified Keycloak-backed SSO, enabling seamless cross-app switching for end users.',
-        'Built and maintained NestJS microservices and Docker-based infrastructure supporting the MFE platform, owning both frontend and backend layers end to end.',
-        'Collaborated directly with product stakeholders across inventory, logistics, and operations domains, translating business requirements into TypeScript-first full-stack solutions.',
+        'At Mariner, optimized always-on Angular shop-floor apps so continuous industrial telemetry did not freeze operator screens during peak load.',
+        'Cut render storms with CDK-style virtual scrolling, OnPush change detection, WebSockets, workers, and NgRx — middleware kept ingest pipelines out of the UI process.',
+        'At Creed, led Keycloak SSO migration and a super-app navigation layer so multiple Angular/React MFEs shared one identity boundary without breaking product switching.',
+        'Delivered NestJS services and Dockerized platform pieces with inventory, logistics, and operations stakeholders who needed stable day-to-day industrial tooling.',
+        'Treated shop-floor latency as a production risk — jank reads as lost floor trust; SSO and MFE tenancy had to agree for suites to feel unified.',
       ],
       extendedHighlights: [
-        'Stack on this role: Angular, React, TypeScript, NestJS, Node.js, Docker, Keycloak.',
+        'Creed tenure Nov 2022 – Apr 2024; Mariner Jul 2021 – Nov 2022 — consecutive industrial/enterprise delivery.',
       ],
       technologies: [
         'Angular',
         'React',
-        'TypeScript',
-        'Node.js',
+        'NgRx',
+        'WebSockets',
+        'Workers',
         'NestJS',
-        'Docker',
         'Keycloak',
-      ],
-    },
-    {
-      id: 'mariner',
-      company: 'Mariner',
-      title: 'Front-End Software Engineer',
-      dates: 'Jul 2021 – Nov 2022',
-      printHighlights: [
-        'Built Angular applications for industrial operations and shop-floor software.',
-        'Collaborated on API contract design and data modeling with backend teams.',
-        'Promoted Docker adoption across development teams through technical guidance.',
-        'Maintained cloud-hosted applications and Azure integrations.',
-      ],
-      extendedHighlights: [
-        'Also maintained related pipelines for Azure-hosted applications.',
-        'Stack on this role: Angular, TypeScript, Azure, Docker, GitHub Actions.',
-      ],
-      technologies: [
-        'Angular',
-        'TypeScript',
-        'Azure',
         'Docker',
-        'GitHub Actions',
+        'Azure',
       ],
     },
     {
@@ -186,14 +205,13 @@ export const resume: Resume = {
       title: 'Full Stack Software Engineer / Technical Lead',
       dates: 'Jan 2019 – Jul 2021',
       printHighlights: [
-        'Served as Technical Lead for a banking platform built on a microservices architecture.',
-        'Led integrations with banking systems, payment platforms, and third-party services.',
-        'Worked on security requirements, certification processes, and financial industry standards.',
-        'Mentored junior developers and collaborated directly with customers and business stakeholders.',
+        'Led a banking microservices platform that linked dozens of transit recharge providers while satisfying financial compliance and audit expectations.',
+        'Homologated a POS from scratch and integrated banking/payment partners under COVID deadline pressure without relaxing security gates.',
+        'Mentored engineers and turned customer payment workflows into shippable C#/.NET and Angular releases with clear ownership boundaries.',
+        'Treated provider outages, POS homologation, and banking rules as the product itself — not side chores around the API.',
       ],
       extendedHighlights: [
-        'Third-party integrations included payment and transport-related services.',
-        'Stack on this role: C#, .NET Core, RabbitMQ, PostgreSQL, Angular, AWS, Docker.',
+        'Stack emphasis: event-driven integrations with RabbitMQ under AWS-hosted services.',
       ],
       technologies: [
         'C#',
@@ -208,20 +226,24 @@ export const resume: Resume = {
     {
       id: 'rzx',
       company: 'RZX Tecnologia',
-      title: 'Full Stack Software Engineer',
+      title: 'Full Stack Software Engineer / Technical Lead',
       dates: 'Jan 2016 – Dec 2018',
       printHighlights: [
-        'Progressed from intern to a key contributor on industrial software projects.',
-        'Developed backend services, APIs, and web applications supporting real-time offshore operations.',
-        'Contributed to distributed systems processing operational data and continued supporting the platform as an independent consultant.',
+        'Owned the full industrial product — Angular/React operator UIs and backend services — for real-time offshore operational data from domain model through deploy.',
+        'Designed 24/7 surfaces with WebSockets, workers, shared state, and microservice middleware so ingest spikes could not stall the control UI.',
+        'Kept live operational grids usable with list virtualization and OnPush / memoized rendering under continuous field updates.',
+        'Shipped a platform selected for offshore oil and gas; later expanded as Cognittiv and still runs — continued as consultant after the transition.',
       ],
       extendedHighlights: [
-        'Stack on this role: Node.js, Angular, React, Docker, Redis, PostgreSQL.',
+        'Prioritized trustworthy live state for offshore operators over feature count.',
+        'Grew from intern to technical lead ownership of the core platform.',
       ],
       technologies: [
         'Node.js',
         'Angular',
         'React',
+        'WebSockets',
+        'Workers',
         'Docker',
         'Redis',
         'PostgreSQL',
@@ -233,11 +255,12 @@ export const resume: Resume = {
       title: 'Software Developer Intern',
       dates: 'May 2015 – Aug 2015',
       printHighlights: [
-        'Built ISO-compliant mobile applications during a summer internship in Regina, Saskatchewan, Canada.',
-        'Developed hybrid mobile apps using Apache Cordova, jQuery, JavaScript, and HTML/CSS for internal utility operations.',
+        'Built ISO-compliant hybrid mobile apps for internal utility operations during a summer internship in Regina, Saskatchewan, Canada.',
+        'Delivered Cordova and JavaScript clients used by field and office staff for day-to-day utility workflows under ISO process constraints.',
+        'Collaborated with Canadian utility stakeholders to ship usable tools in one summer term without sacrificing process compliance.',
       ],
       extendedHighlights: [
-        'Stack on this role: Apache Cordova, jQuery, JavaScript, HTML/CSS.',
+        'Internal utility tools succeed when workflows are process-compliant and trustworthy for field staff — polish is secondary.',
       ],
       technologies: ['Apache Cordova', 'jQuery', 'JavaScript', 'HTML/CSS'],
     },
@@ -263,6 +286,7 @@ export const resume: Resume = {
       degree: 'Computer Science Exchange Program',
       school: 'University of Regina, Canada',
       dates: '2014',
+      screenOnly: true,
     },
   ],
   languages: [
@@ -270,9 +294,9 @@ export const resume: Resume = {
     { name: 'Portuguese', level: 'Native' },
   ],
   meta: {
-    title: 'Guilherme Ferreira — Full Stack Software Engineer',
+    title: 'Guilherme Ferreira — Software Engineer · AI Systems',
     description:
-      'Résumé of Guilherme Ferreira, Full Stack Software Engineer with experience in distributed systems, manufacturing software, and enterprise applications.',
+      'Guilherme Ferreira — software engineer focused on AI systems, LLM platforms, and spec-driven delivery across distributed and enterprise software.',
     siteUrl: 'https://guilheeeeeeerme.github.io/resume/',
   },
 }

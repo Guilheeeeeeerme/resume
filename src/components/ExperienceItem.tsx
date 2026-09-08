@@ -2,12 +2,9 @@ import type { ExperienceEntry } from '../types/resume'
 
 type Props = {
   job: ExperienceEntry
-  expanded: boolean
-  onToggle: () => void
 }
 
-export function ExperienceItem({ job, expanded, onToggle }: Props) {
-  const panelId = `experience-${job.id}-details`
+export function ExperienceItem({ job }: Props) {
   const hasExtended = job.extendedHighlights.length > 0
 
   return (
@@ -36,28 +33,13 @@ export function ExperienceItem({ job, expanded, onToggle }: Props) {
       </p>
 
       {hasExtended ? (
-        <>
-          <button
-            type="button"
-            className="more-btn screen-only"
-            aria-expanded={expanded}
-            aria-controls={panelId}
-            onClick={onToggle}
-          >
-            {expanded ? 'Hide details' : 'More details'}
-          </button>
-          <div
-            id={panelId}
-            className="job-extended screen-only"
-            hidden={!expanded}
-          >
-            <ul>
-              {job.extendedHighlights.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
-          </div>
-        </>
+        <div className="job-extended screen-only">
+          <ul>
+            {job.extendedHighlights.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        </div>
       ) : null}
     </article>
   )

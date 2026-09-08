@@ -12,7 +12,10 @@ export function Education({ education }: Props) {
       </h2>
       <ul className="edu-list">
         {education.map((edu) => (
-          <li className="edu" key={edu.degree}>
+          <li
+            className={edu.screenOnly ? 'edu screen-only' : 'edu'}
+            key={edu.degree}
+          >
             <strong>{edu.degree}</strong>
             <span>{edu.school}</span>
             {edu.dates && <span className="edu-dates">{edu.dates}</span>}

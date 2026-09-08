@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "print:a4": "node scripts/print-validate.mjs --format=a4",
     "print:letter": "node scripts/print-validate.mjs --format=letter",
-    "print:test": "node scripts/print-validate.mjs",
+    "print:test": "node scripts/print-validate.mjs --format=letter",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

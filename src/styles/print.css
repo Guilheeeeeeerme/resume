@@ -1,6 +1,7 @@
+/* Letter is the target print format for this résumé. */
 @page {
-  size: auto;
-  margin: 0;
+  size: letter;
+  margin: 0.2in;
 }
 
 @media print {
@@ -8,15 +9,16 @@
   [data-theme='light'],
   [data-theme='dark'],
   html {
-    --background: #fff;
-    --surface: #fff;
-    --text: #111;
-    --muted-text: #444;
-    --border: #ccc;
-    --accent: #1e3a4f;
-    --accent-dark: #1e293b;
-    --link: #1e3a4f;
-    --sidebar-bg: #f8f8f8;
+    --surface-base: #fff;
+    --surface-raised: #fff;
+    --surface-sidebar: #f6f8fa;
+    --text-primary: #1f2328;
+    --text-secondary: #656d76;
+    --border-default: #d0d7de;
+    --header-bg: #11122f;
+    --accent: #11122f;
+    --accent-soft: #0969da;
+    --link: #0969da;
     --page-chrome: #fff;
     color-scheme: light;
   }
@@ -41,48 +43,49 @@
   .screen-only,
   .toolbar,
   .skip-link,
-  .more-btn,
-  .job-extended {
+  .job-extended,
+  .projects-note,
+  .project-desc,
+  .project-tagline {
     display: none !important;
   }
 
   .resume {
     width: 100%;
-    max-width: 210mm;
+    max-width: none;
     min-height: 0;
     max-height: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     border: none;
     box-shadow: none;
-    font-size: 8.5pt;
-    line-height: 1.25;
+    font-size: 8.2pt;
+    line-height: 1.24;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     overflow: visible;
   }
 
   .resume-header {
-    padding: 5mm 7mm 4mm;
-    gap: 1mm;
+    padding: 4mm 5.5mm 3mm;
+    gap: 0.8mm;
   }
 
   h1 {
-    font-size: 16pt;
-    letter-spacing: 0.06em;
+    font-size: 15.5pt;
+    letter-spacing: 0.04em;
     line-height: 1.05;
   }
 
   .headline {
-    font-size: 9pt;
-    letter-spacing: 0.02em;
+    font-size: 8.8pt;
   }
 
   .contact {
-    gap: 0.5mm 3mm;
+    gap: 0.4mm 2.3mm;
     font-size: 7pt;
-    line-height: 1.2;
-    margin-top: 1.5mm;
+    line-height: 1.18;
+    margin-top: 0.9mm;
   }
 
   .contact a {
@@ -91,58 +94,105 @@
     border-bottom: none;
   }
 
-  /* Two-column print */
   .resume-columns {
     display: grid;
-    grid-template-columns: 62% 38%;
+    grid-template-columns: 66% 34%;
     align-items: start;
   }
 
   .col-main {
-    padding: 3.5mm 4mm 3mm 7mm;
-    gap: 2mm;
+    padding: 3mm 3.8mm 2.5mm 5.5mm;
+    gap: 2.1mm;
     border-right: 0.5pt solid #ccc;
   }
 
   .col-side {
-    padding: 3.5mm 7mm 3mm 4mm;
-    gap: 2mm;
-    background: #f8f8f8;
+    padding: 3mm 5.5mm 2.5mm 3.2mm;
+    gap: 1.8mm;
+    background: #f6f8fa;
   }
 
   .resume-section {
-    gap: 1mm;
+    gap: 0.9mm;
   }
 
   .section-title {
-    font-size: 7pt;
-    letter-spacing: 0.1em;
-    padding-bottom: 0.8mm;
-    border-bottom-width: 1pt;
-    margin-bottom: 0.5mm;
-    color: #1e3a4f;
+    font-size: 6.8pt;
+    letter-spacing: 0.08em;
+    padding-bottom: 0.55mm;
+    border-bottom-width: 1.1pt;
+    margin-bottom: 0.35mm;
+    color: #11122f;
   }
 
   .summary {
-    font-size: 8pt;
+    font-size: 7.3pt;
     line-height: 1.28;
   }
 
-  /* Skills sidebar */
+  .most-amazing {
+    padding: 1.3mm 1.4mm;
+    gap: 0.4mm;
+    border-left-width: 1.4pt;
+  }
+
+  .most-amazing-label {
+    font-size: 5.8pt;
+  }
+
+  .most-amazing-body {
+    font-size: 6.9pt;
+    line-height: 1.24;
+  }
+
+  .projects-list {
+    gap: 1mm;
+  }
+
+  .project {
+    gap: 0.25mm;
+    padding-top: 0.7mm;
+    border-top: 0.4pt solid #d0d7de;
+  }
+
+  .projects-list .project:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .project-name {
+    font-size: 7.2pt;
+  }
+
+  .project-tagline {
+    font-size: 6.2pt;
+  }
+
+  .project-links {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1mm;
+  }
+
+  .project-url {
+    font-size: 5.3pt;
+    color: #0969da;
+  }
+
   .skills {
-    gap: 0.5mm;
+    gap: 0.55mm;
   }
 
   .skill-label {
-    font-size: 6.8pt;
+    font-size: 6pt;
   }
 
   .skill-value {
-    font-size: 7.5pt;
-    line-height: 1.2;
+    font-size: 6.5pt;
+    line-height: 1.16;
   }
 
-  /* Keep keyword blob in PDF text layer for ATS, hide visually to save space */
   .skills-keywords {
     position: absolute;
     width: 1px;
@@ -155,79 +205,80 @@
     border: 0;
   }
 
-  /* Experience */
   .jobs {
     gap: 1.5mm;
   }
 
   .job {
     gap: 0.5mm;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   .job-title {
-    font-size: 8.5pt;
+    font-size: 8pt;
   }
 
   .job-date {
-    font-size: 7pt;
+    font-size: 6.8pt;
   }
 
   .job-highlights {
-    padding-left: 3mm;
-    gap: 0.35mm;
+    padding-left: 2.8mm;
+    gap: 0.4mm;
   }
 
   .job-highlights li {
-    font-size: 7.5pt;
-    line-height: 1.22;
+    font-size: 6.9pt;
+    line-height: 1.2;
   }
 
   .stack {
-    display: none;
+    display: block;
+    font-size: 6pt;
+    line-height: 1.15;
+    color: #656d76;
+    margin-top: 0.4mm;
   }
 
-  /* Achievements */
   .achievements-list {
-    gap: 1mm;
+    gap: 1.1mm;
   }
 
   .achievement {
-    padding-left: 1.5mm;
-    border-left-width: 1pt;
-    gap: 0.1mm;
+    padding-left: 1.4mm;
+    border-left-width: 1.1pt;
+    gap: 0.25mm;
   }
 
   .achievement-title {
-    font-size: 7.8pt;
-  }
-
-  .achievement-desc {
-    font-size: 7.3pt;
-    line-height: 1.22;
-  }
-
-  /* Education */
-  .edu-list,
-  .lang-list {
-    gap: 1mm;
-  }
-
-  .edu strong {
-    font-size: 7.8pt;
-  }
-
-  .edu span {
     font-size: 7pt;
   }
 
+  .achievement-desc {
+    font-size: 6.2pt;
+    line-height: 1.15;
+  }
+
+  .edu-list,
+  .lang-list {
+    gap: 0.75mm;
+  }
+
+  .edu strong {
+    font-size: 6.8pt;
+  }
+
+  .edu span {
+    font-size: 6.3pt;
+  }
+
   .edu-dates {
-    font-size: 6.8pt !important;
+    font-size: 6pt !important;
   }
 
   .lang-list li {
-    font-size: 7.5pt;
+    font-size: 6.5pt;
   }
 
   a[href]::after {
@@ -236,10 +287,10 @@
 
   .resume-print-footer {
     margin: 0;
-    padding: 1mm 7mm 2mm;
-    border-top: 0.5pt solid #ccc;
-    font-size: 5.5pt;
-    line-height: 1.15;
+    padding: 0.8mm 5.5mm 1.2mm;
+    border-top: 0.4pt solid #ccc;
+    font-size: 5.1pt;
+    line-height: 1.12;
     color: #666;
     text-align: center;
   }
