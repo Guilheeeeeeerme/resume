@@ -124,7 +124,7 @@ export const resume: Resume = {
     },
     {
       label: 'Infra',
-      value: 'Docker, Git, Kubernetes (basic), AWS, Azure, GitHub Actions, MinIO, Workers',
+      value: 'Docker, Git, AWS, Azure, GitHub Actions, MinIO, Workers',
     },
     {
       label: 'Architecture',
